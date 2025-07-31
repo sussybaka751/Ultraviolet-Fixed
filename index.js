@@ -3,9 +3,9 @@ const { createProxyMiddleware } = require("http-proxy-middleware");
 const app = express();
 const port = process.env.PORT || 8080;
 
-// Example proxy to Google
+// Proxy to Brave Search
 app.use("/", createProxyMiddleware({
-  target: "https://www.google.com",
+  target: "https://search.brave.com",
   changeOrigin: true,
   pathRewrite: {
     "^/": "/"
